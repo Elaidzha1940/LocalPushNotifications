@@ -66,6 +66,11 @@ class NotificationManager {
             trigger: trigger)
         UNUserNotificationCenter.current().add(request)
     }
+    
+    func cancelNotification() {
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+    }
 }
 
 struct ContentView: View {
@@ -80,6 +85,10 @@ struct ContentView: View {
             
             Button("Schedule Notification") {
                 NotificationManager.instance.scheduleNotification()
+            }
+            
+            Button("Cancel Notification") {
+                NotificationManager.instance.cancelNotification()
             }
         }
         .buttonStyle(.bordered)
