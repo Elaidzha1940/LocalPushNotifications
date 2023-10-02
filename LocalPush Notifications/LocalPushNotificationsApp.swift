@@ -1,9 +1,11 @@
+//  /*
 //
-//  LocalPushNotificationsApp.swift
-//  LocalPush Notifications
+//  Project: LocalPushNotifications
+//  File: ContentView.swift
+//  Created by: Elaidzha Shchukin
+//  Date: 02.10.2023
 //
-//  Created by Elaidzha Shchukin on 02.10.2023.
-//
+//  */
 
 import SwiftUI
 
