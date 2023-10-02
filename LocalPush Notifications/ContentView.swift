@@ -34,9 +34,10 @@ struct ContentView: View {
         VStack {
     
             Button("Request ermission") {
-                <#code#>
+                NotificationManager.instance.requestAuthorization()
             }
         }
+       // .preferredColorScheme(.dark)
     }
 }
 
