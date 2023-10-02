@@ -9,6 +9,7 @@
 
 import SwiftUI
 import UserNotifications
+import CoreLocation
 
 class NotificationManager {
     
@@ -46,6 +47,18 @@ class NotificationManager {
 //        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         
         //MARK: Location
+        let coordinates = CLLocationCoordinate2D(
+            latitude: 20.00 ,
+            longitude: 70.00)
+        
+        let region = CLCircularRegion(
+            center: coordinates,
+            radius: 50,
+            identifier: UUID().uuidString)
+        region.notifyOnEntry = true
+        region.notifyOnExit = false
+        
+        let trigger = UNLocationNotificationTrigger(region: region, repeats: true)
         
         let request = UNNotificationRequest(
             identifier: UUID().uuidString,
