@@ -35,9 +35,15 @@ class NotificationManager {
         content.badge = 1
         
         // MARK: Time
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5.0, repeats: false)
+        //let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5.0, repeats: false)
         
         //MARK: Calendar
+//        var dateComponents = DateComponents()
+//        dateComponents.hour = 19
+//        dateComponents.minute = 21
+//        dateComponents.weekday = 2
+//
+//        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         
         //MARK: Location
         
