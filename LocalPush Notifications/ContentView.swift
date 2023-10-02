@@ -26,7 +26,7 @@ class NotificationManager {
         }
     }
     
-    func schedulNotification () {
+    func scheduleNotification () {
         
         let content = UNMutableNotificationContent()
         content.title = "Notification"
@@ -53,17 +53,18 @@ struct ContentView: View {
     
     var body: some View {
         
-        VStack {
+        VStack(spacing: 20) {
             
-            Button("Request ermission") {
+            Button("Request Permission") {
                 NotificationManager.instance.requestAuthorization()
             }
             
-            Button("S chedul Notification") {
-                NotificationManager.instance.requestAuthorization()
+            Button("Schedule Notification") {
+                NotificationManager.instance.scheduleNotification()
             }
-
         }
+        .buttonStyle(.bordered)
+        .foregroundColor(.white)
         .preferredColorScheme(.dark)
     }
 }
